@@ -50,7 +50,7 @@ int main() {
 			flag_inputFormat = false;
 			if (!buffer.eof()) {
 				buffer >> input_value;
-				if (!cin.eof()) {
+				if (!buffer.eof()) {
 					buffer >> input_row;
 					if (!buffer.eof()) {
 						flag_inputFormat = true;
@@ -72,7 +72,7 @@ int main() {
 			flag_inputFormat = false;
 			if (!buffer.eof()) {
 				buffer >> input_row;
-				if (!cin.eof()) {
+				if (!buffer.eof()) {
 					buffer >> input_column;
 					game.enter(0, input_row, input_column);
 					if (!game.flag_lastEntry) {
